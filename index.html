@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>    
+    <title>Wanderlust</title>    
     <link href="style.css" rel="stylesheet">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -16,14 +16,14 @@
     
     <nav class=" navbar navbar-expand-lg ">
         <div class="container-fluid">
-          <a class="navbar-brand text-dark-purple fw-bold" href="#">Wanderlust</a>
+          <a class="navbar-brand text-dark-purple fw-bold" href="index.html">Wanderlust</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active text-dark-purple" aria-current="page" href="#">Home</a>
+                <a class="nav-link active text-dark-purple" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-dark-purple" href="#">Categories</a>
@@ -40,7 +40,7 @@
             </ul>
             <span class="navbar-text">
                 <div class="div-svg">
-             <button class="btn btn-primary dark-purple"> <span class="div-svg-btn"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg>
+             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Loginmodel"> <span class="div-svg-btn"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg>
                 Login</span></button>
 
              <button class="btn btn-primary dark-purple"><span class="div-svg-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
@@ -50,6 +50,72 @@
           </div>
         </div>
     </nav>
+    <!--Login Model-->
+    <div class="modal fade" id="Loginmodel" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container py-2 ">
+              <div class="row d-flex justify-content-center align-items-center ">
+                <div class="col">
+                  <div class="card text-black">
+                    <div class=" g-0">
+                      <div class="">
+                        <div class="card-body p-3  mx-md-4">
+                          <button type="button" class="btn-close float-right" data-bs-dismiss="modal" aria-label="Close"></button>
+    
+                          <div class="text-center mt-3">
+                            <img src="logo.png"
+                              style="width: 300px;" alt="logo">
+                            <h4 class=" mt-3 mb-5 pb-1 dark-blue-text">Step Inside Our World</h4>
+                          </div>
+          
+                          <form class="ms-auto me-auto justify-content-center">
+                            <p>Please login to your account</p>
+          
+                            <div class="form-outline mb-4">
+                                <label class="form-label" >Username</label>
+    
+                              <input type="email"  class="form-control"
+                                placeholder="Usernamer or Email" />
+                            </div>
+          
+                            <div class="form-outline mb-3">
+                             <label class="form-label" >Password</label>
+    
+                              <input type="password" class="form-control" placeholder="Password" />
+                              <a class="text-muted" href="#!">Forgot password?</a>
+                            </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                                  <label class="form-check-label" for="form1Example3"> Remember me </label>
+                                </div>
+          
+                            <div class="text-center pt-1 mb-1 pb-1">
+                              <button class="btn btn-primary btn-block fw-bold  mb-1" type="button">Log
+                                in</button>
+    
+                            </div>
+          
+                            <div class="d-flex align-items-center justify-content-center pb-4">
+                              <p class="mb-0 me-2">Don't have an account?</p>
+                              <button type="button" class="btn btn-outline-danger">Create new</button>
+                            </div>
+          
+                          </form>
+          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </div>
 
     <!-- header-->
     <header>
@@ -111,7 +177,7 @@
                     <br>
                     <br>
             
-                    <div class="row row-cols-1 row-cols-md-2 g-4 ">
+                    <div class="row row-cols-md-2 g-4 ">
                         <div class="col border-card ">
                             <div class="row no-gutters">
                                 <div class=" w-40 cards-img">
@@ -130,7 +196,7 @@
                             </div>
             
                                     <p class="card-text mb-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <span class="read-more"><a href="#">Read More</a></span>
+                                    <span class="read-more"><a href="blog.html">Read More</a></span>
                                     </div>
                                   </div>
                                 </div>
@@ -154,7 +220,7 @@
                             </div>
             
                                     <p class="card-text mb-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <span class="read-more"><a href="#">Read More</a></span>
+                                    <span class="read-more"><a href="blog.html">Read More</a></span>
                                     </div>
                                   </div>
                                 </div>
@@ -178,7 +244,7 @@
                             </div>
             
                                     <p class="card-text mb-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <span class="read-more"><a href="#">Read More</a></span>
+                                    <span class="read-more"><a href="blog.html">Read More</a></span>
                                     </div>
                                   </div>
                                 </div>
@@ -202,7 +268,7 @@
                             </div>
             
                                     <p class="card-text mb-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <span class="read-more"><a href="#">Read More</a></span>
+                                    <span class="read-more"><a href="blog.html">Read More</a></span>
                                     </div>
                                   </div>
                                 </div>
@@ -226,7 +292,7 @@
                             </div>
             
                                     <p class="card-text mb-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <span class="read-more"><a href="#">Read More</a></span>
+                                    <span class="read-more"><a href="blog.html">Read More</a></span>
                                     </div>
                                   </div>
                                 </div>
@@ -250,7 +316,7 @@
                             </div>
             
                                     <p class="card-text mb-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <span class="read-more"><a href="#">Read More</a></span>
+                                    <span class="read-more"><a href="blog.html">Read More</a></span>
                                     </div>
                                   </div>
                                 </div>
