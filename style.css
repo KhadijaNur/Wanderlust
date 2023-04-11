@@ -25,7 +25,7 @@ svg{
 }
 .float-right{
     margin-top: 2px;
-    float:right
+    float:right !important;
 }
 
 .div-svg-btn {
