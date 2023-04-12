@@ -269,3 +269,31 @@ img {
 a {
     text-decoration: none !important;
 }
+.tag-line{
+    border-bottom: #4e5b7b5d 1px solid;
+    width: 100%;
+}
+.author-img{
+    width: 30px;
+    height: 30px;
+}
+.author-img-top{
+    width: 36px;
+    height: 36px; 
+}
+.min-read{
+    font-size: 12px;
+}
+.article-img{
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+}
+
+.btn-follow {
+    width: 65px !important;
+    height: 30px !important;
+    padding: 4px 12px 6px !important;
+    box-sizing: border-box !important;
+    font-size: 14px !important;
+}
