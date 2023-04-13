@@ -297,3 +297,52 @@ a {
     box-sizing: border-box !important;
     font-size: 14px !important;
 }
+
+a:link {
+    text-decoration: none
+}
+.Topics-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  .search-input {
+    width: 60%;
+    border: 3px solid #19376D;
+    border-right: none;
+    padding: 7px;
+    padding-left: 2%;
+    height: 48px;
+    border-radius: 40px 0 0 40px;
+    outline: none;
+    color: #2c6ad4;
+  }
+  
+  .search-input:focus{
+    color: #19376D;
+  }
+  
+  .search-btn {
+    width: 12%;
+    max-width: 70px;
+    height: 48px;
+    border: 1px solid #26519f;
+    background: #19376D;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 40px 40px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .category-list{
+    text-align: left !important;
+  }
+  
