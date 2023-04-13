@@ -315,7 +315,7 @@ a:link {
   }
   
   .search-input {
-    width: 60%;
+    width: 70%;
     border: 3px solid #19376D;
     border-right: none;
     padding: 7px;
@@ -329,9 +329,12 @@ a:link {
   .search-input:focus{
     color: #19376D;
   }
+  w-85{
+    width: 85% !important;
+  }
   
   .search-btn {
-    width: 12%;
+    width: 15%;
     max-width: 70px;
     height: 48px;
     border: 1px solid #26519f;
