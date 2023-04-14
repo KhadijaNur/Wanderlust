@@ -1,26 +1,62 @@
-$( document ).ready( function() {
-	
-	jQuery(function ($) {
-    	"use strict";
-    
-    	var counterUp = window.counterUp["default"]; // import counterUp from "counterup2"
-    
-    	var $counters = $(".counter");
-    
-    	/* Start counting, do this on DOM ready or with Waypoints. */
-		$counters.each(function (ignore, counter) {
-			var waypoint = new Waypoint( {
-				element: $(this),
-				handler: function() { 
-					counterUp(counter, {
-						duration: 5000,
-						delay: 16
-					}); 
-					this.destroy();
-				},
-				offset: 'bottom-in-view',
-			} );
-		});
+// Get all the elements with the class "count"
+const countElements = document.querySelectorAll('.counter');
 
-	});
- });
+// Create an Intersection Observer instance
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      if (!entry.target.classList.contains('counted')) {
+        // Add the "counted" class to the element so that it doesn't count up again
+        entry.target.classList.add('counted');
+
+        // Determine whether to start counting from 100 or from half the number
+        const countTarget = parseInt(entry.target.textContent);
+        let countStart;
+        if (countTarget > 150) {
+          countStart = countTarget - 100;
+        } else {
+          countStart = countTarget / 2;
+        }
+
+        // Count up from the start value to the full number
+        let count = countStart;
+        const countInterval = setInterval(() => {
+          if (count < countTarget) {
+            count += 1;
+            entry.target.textContent = Math.floor(count).toString();
+          } else {
+            clearInterval(countInterval);
+          }
+        }, 50);
+
+        // Store the count interval ID on the element
+        entry.target.dataset.countIntervalId = countInterval.toString();
+      } else {
+        // Get the stored count interval ID and restart the count from the current value
+        const countIntervalId = entry.target.dataset.countIntervalId;
+        let count = parseInt(entry.target.textContent);
+        const countTarget = parseInt(entry.target.textContent);
+        const countInterval = setInterval(() => {
+          if (count < countTarget) {
+            count += 1;
+            entry.target.textContent = Math.floor(count).toString();
+          } else {
+            clearInterval(countInterval);
+          }
+        }, 50);
+
+        // Update the stored count interval ID on the element
+        entry.target.dataset.countIntervalId = countInterval.toString();
+      }
+    } else {
+      // Remove the "counted" class and clear the count interval when the element is no longer visible
+      entry.target.classList.remove('counted');
+      clearInterval(parseInt(entry.target.dataset.countIntervalId));
+    }
+  });
+});
+
+// Observe all the elements with the class "count"
+countElements.forEach(countElement => {
+  observer.observe(countElement);
+});
