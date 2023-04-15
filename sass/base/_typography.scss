@@ -1,0 +1,35 @@
+.story-primary-heading{
+    color:$color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    &-main{
+        display: block;
+        font-size: 60px;
+        font-weight: 600;
+        letter-spacing:17px ;
+        animation: moveToLeft 1s ease-out;
+      
+      }
+      &-sub{
+        display: block;
+        font-size: 20px;
+        font-weight:600 ;
+        letter-spacing:10px ;
+        animation: moveToRight 1s ease-out;
+        
+      }
+  
+  }
+
+  .heading-tertiary{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .paragraph{
+    font-size: 1.6rem;
+    &:not(:last-child){
+      margin-bottom: 3rem;
+    }
+
+  }
